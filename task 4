@@ -1,4 +1,3 @@
-
 import matplotlib.pyplot as plt
 
 def quadratic_weather_model(time, pressure, windspeed, humidity):
