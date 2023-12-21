@@ -1,0 +1,32 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+pressure = int(input("Enter the value of pressure: "))
+windspeed = int(input("Enter the value of windspeed: "))
+humidity = int(input("Enter the value of humidity: "))
+
+x = np.linspace(-10, 10, 400)
+
+
+y1 = pressure*x**2 + windspeed*x + humidity
+
+plt.plot(x, y1, label=f'UserInput:4{pressure}x^2 + {windspeed}x + {humidity}')
+
+
+pressure = 3
+windspeed = -2
+humidity = 3
+
+
+y2 = pressure*x**2 + windspeed*x + humidity
+
+
+plt.plot(x, y2, label=f'HardCoded:{pressure}x^2 + {windspeed}x + {humidity}')
+
+plt.title('Plot of the quadratic functions')
+plt.xlabel('x')
+plt.ylabel('y')
+plt.legend()
+plt.grid(True)
+
+plt.show()
